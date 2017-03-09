@@ -28,12 +28,23 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, 'public')));
 
-app.all('/user*', function(req, res, next) {  
+app.get('/', function(req, res, next) {  
     res.sendFile('index.html', { root: __dirname + "/public" });
 });
-
+app.get('/education', function(req, res, next) {  
+    res.sendFile('index.html', { root: __dirname + "/public" });
+});
 app.get("/login", function(req, res, next) {  
-    res.send("dsasad");
+    res.sendFile('index.html', { root: __dirname + "/public" });
+});
+app.get("/registration", function(req, res, next) {  
+    res.sendFile('index.html', { root: __dirname + "/public" });
+});
+app.get("/education", function(req, res, next) {  
+    res.sendFile('index.html', { root: __dirname + "/public" });
+});
+app.get("/profile", function(req, res, next) {  
+    res.sendFile('index.html', { root: __dirname + "/public" });
 });
 
 app.use('/', index);

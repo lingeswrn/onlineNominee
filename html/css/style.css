@@ -24,6 +24,14 @@ body.sign-body {
 a, a:hover {
 	color: #34b5ca;
 }
+.form-control, button, .form-control:focus {
+	box-shadow: none !important;
+	border-radius: 0 !important;
+}
+
+.form-control:focus{
+	border: 1px solid #34b5ca !important;
+}
 .blue-btn {
 	background: #34b5ca;	
 	color: #fff;
@@ -164,6 +172,7 @@ a, a:hover {
 	font-size: 18px;
 	line-height: 18px;
 	vertical-align: middle;	
+	width: 18px;
 }
 h2 span {
     font-size: 12px;
@@ -208,22 +217,36 @@ h2 {
     padding: 5px 15px;
     border: 1px solid #ccc;
 }
-a.img-upload {
+.custom-file-upload.img-upload {
     position: absolute;
     bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255,255,255,0.7);
-    padding: 8px;
-    width: 200px;
-    text-align: center;
-    height: 40px;
-    color: #222;
+    left: 26px;
+    background: rgba(255,255,255,0.8);
+}
+footer {
+    background: #212530;
+    padding: 10px 0;
+}
+footer p {
+    color: #fff;
+    margin-bottom: 0;
+}
+.img-upload input.file-upload-input {
+    display: none;
+}
+.img-upload button {
+	background: transparent;
+}
+.img-upload button:focus {
+	outline: medium none;
+	border: 0 none;
 }
 .dp-holder {
     position: relative;
     border-radius: 50%;
     overflow: hidden;
+    width: 80%;
+    margin-top: 15px;
 }
 .file-upload-button {
     cursor: pointer; 
@@ -233,4 +256,26 @@ a.img-upload {
     padding: 6px 20px; 
     border: none;
     margin-left: -1px;  
+}
+.input-group.input-group-unstyled input.form-control {
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+.input-group-unstyled .input-group-addon {
+    border-radius: 4px;
+    border: 0px;
+    padding-left: 0;	
+    background-color: transparent;
+}
+@media (max-width: 600px) {
+.form-holder {
+    width: 90%;
+}	
+}
+@media (max-width: 767px) {
+.nav-container li.nav-btn {
+    border: 1px solid #fff;
+    margin-right: 0;
+}	
 }

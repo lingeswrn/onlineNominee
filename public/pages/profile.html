@@ -1,0 +1,151 @@
+<div class="wrapper">
+	<div ng-include="'pages/userHeader.html'"></div>
+	<div class="title-holder">
+		<div class="container">
+			<h2>My Profile</h2>
+		</div>
+	</div>
+	<div class="empty-25"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="dp-holder">
+					<img src="dist/images/dp.png" class="img-responsive" alt="" />
+					<div class="custom-file-upload img-upload"><input type="file" id="file" name="myfiles[]" multiple /></div>
+				</div>
+			</div>
+			<div class="col-sm-offset-1 col-sm-8">
+				<h2>Employee Name <span>Edit <i class="fa fa-pencil" aria-hidden="true"></i></span></h2>
+				<div class="empty-10"></div>
+					<form>
+						<div class="form-body on-form">	
+							<div class="row">
+								<div class="form-group col-sm-6">
+									<div class="input-group input-group-unstyled">
+										<span class="input-group-addon">
+										   <i class="fa fa-suitcase" aria-hidden="true"></i>
+										</span>
+										<input type="text" class="form-control" />
+									</div>									
+								</div>								
+								<div class="form-group col-sm-6">
+									<div class="input-group input-group-unstyled">
+										<span class="input-group-addon">
+										   <i class="fa fa-map-marker" aria-hidden="true"></i>
+										</span>
+										<input type="text" class="form-control" />
+									</div>																		
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-6">
+									<div class="input-group input-group-unstyled">
+										<span class="input-group-addon">
+										   <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+										</span>
+										<input type="text" class="form-control" />
+									</div>																		
+								</div>
+								<div class="form-group col-sm-6">		
+									<div class="input-group input-group-unstyled">
+										<span class="input-group-addon">
+										   <i class="fa fa-envelope-o" aria-hidden="true"></i>
+										</span>
+										<input type="text" class="form-control" />
+									</div>																		
+								</div>
+							</div>		
+							<div class="row">
+								<div class="form-group col-sm-6">
+									<div class="input-group input-group-unstyled">
+										<span class="input-group-addon">
+										   <i class="fa fa-phone" aria-hidden="true"></i>
+										</span>
+										<input type="text" class="form-control" />
+									</div>																		
+								</div>
+								<div class="form-group col-sm-6">
+									<ul class="list-unstyled list-inline">
+										<li><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
+										<li><i class="fa fa-twitter-square" aria-hidden="true"></i></li>
+									</ul>					
+								</div>
+							</div>					
+						</div>
+						<div class="text-right">	
+							<button type="submit" class="btn btn-default blue-btn">Update</button>
+						</div>
+					</form>
+		
+			</div>
+		</div>
+		<hr/>
+		<div class="empty-10"></div>
+		<div class="row">
+			<div class="col-sm-3">
+				<h2>General Information <span>Edit <i class="fa fa-pencil" aria-hidden="true"></i></span></h2>
+			</div>
+			<div class="col-sm-offset-1 col-sm-8">
+						<div class="form-body on-form">	
+							<div class="row">
+								<div class="col-sm-6">
+									<label>Languages</label>
+								</div>								
+								<div class="form-group col-sm-6">
+									<input type="textbox" class="form-control" value="">
+								</div>
+							</div>							
+							<div class="row">
+								<div class="col-sm-6">
+									<label>Highest Degree Level</label>
+								</div>								
+								<div class="form-group col-sm-6">
+									<input type="textbox" class="form-control" value="">
+								</div>
+							</div>							
+							<div class="row">
+								<div class="col-sm-6">
+									<label>Total Year of Experience</label>
+								</div>								
+								<div class="form-group col-sm-6">
+									<input type="textbox" class="form-control" value="">
+								</div>
+							</div>							
+							<div class="row">
+								<div class="col-sm-6">
+									<label>Job Location</label>
+								</div>								
+								<div class="form-group col-sm-6">
+									<input type="textbox" class="form-control" value="">
+								</div>
+							</div>
+							<div class="text-right">	
+								<label>(Add Field)</label> <button type="submit" class="btn btn-default blue-btn">+</button>
+							</div>
+							
+						</div>		
+			</div>
+		</div>
+		<div class="empty-20"></div>
+		<div class="row">
+			<div class="col-sm-3">
+				<h2>About <span>Edit <i class="fa fa-pencil" aria-hidden="true"></i></span></h2>
+			</div>
+			<div class="col-sm-offset-1 col-sm-8">
+						<div class="form-body on-form">	
+							<div class="row">							
+								<div class="form-group col-sm-12">
+									<textarea class="form-control" rows="10" id="comment"></textarea>
+								</div>
+							</div>	
+							<div class="text-right">	
+								<button type="submit" class="btn btn-default blue-btn">Update</button>
+							</div>							
+						</div>		
+			</div>
+		</div>	
+		<div class="empty-25"></div>	
+	</div>
+</div>
+<!-- /#wrapper -->
+<div ng-include="'pages/footer.html'"></div>

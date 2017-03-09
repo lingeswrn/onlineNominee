@@ -6,20 +6,27 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
 	  requireBase: false
 	});
     $routeProvider
-        .when("/user", {
+        .when("/", {
             templateUrl: "pages/home.html",
 			controller: "homeController"
         })
-		.when("/user/login", {
-			templateUrl: "pages/login.html"
+		.when("/login", {
+			templateUrl: "pages/login.html",
+			controller: "loginController"
+		})
+		.when("/registration", {
+			templateUrl: "pages/registration.html",
+			controller: "registrationController"
+		})
+		.when("/education", {
+			templateUrl: "pages/education.html",
+			controller: "educationController"
+		})
+		.when("/profile", {
+			templateUrl: "pages/profile.html",
+			controller: "profileController"
 		});
         // .otherwise({
         //     redirectTo: "/"
         // });
-}]);
-
-app.controller("homeController",['$http', function($http){
-	$http.get("/login").then( function(data){
-		console.log(data)
-	});
 }]);

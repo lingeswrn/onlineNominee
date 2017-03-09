@@ -1,29 +1,37 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-/* var minifyCSS = require('gulp-minify-css');
+var minifyCSS = require('gulp-minify-css');
 var concatCss = require('gulp-concat-css');
 var fontmin = require('gulp-fontmin');
 var imagemin = require('gulp-imagemin');
-var nodemon = require('gulp-nodemon'); */
+/*var nodemon = require('gulp-nodemon'); */
 
 var paths = {
 	scripts:[
 				'public/assets/javascripts/angular.js',
 				'public/assets/javascripts/angular-route.js',
-				'public/controllers/app.js'
+				'public/assets/javascripts/jquery.js',
+				'public/assets/javascripts/bootstrap.js',
+				'public/controllers/app.js',
+				'public/controllers/homeController.js',
+				'public/controllers/educationController.js',
+				'public/controllers/loginController.js',
+				'public/controllers/registrationController.js',
+				'public/controllers/profileController.js'
 			],
-	styles:['css/style.css',
-			'css/style-res.css',
-			'css/font-awesome.min.css'
+	styles:['public/assets/stylesheets/bootstrap.css',
+			'public/assets/stylesheets/style.css',
+			'public/assets/stylesheets/font-awesome.css'
 			],
-	fonts: ['fonts/*.ttf',
-			'fonts/*.woff',
-			'fonts/*.woff2'
+	fonts: ['public/assets/fonts/*.ttf',
+			'public/assets/fonts/*.woff',
+			'public/assets/fonts/*.woff2'
 			],
-	images:['image/bg-employer.jpg',
-			'image/back-to-top.png',
-			'image/arrow1.png'
+	images:['public/assets/images/*.png',
+			'public/assets/images/*.jpg',
+			'public/assets/images/*.jpeg',
+			'public/assets/images/*.gif'
 			],
 	iPhoneSlider:['image/mobile/new/*.png']
 };
@@ -34,29 +42,29 @@ gulp.task('scripts',function(){
 		.pipe(uglify())
 		.pipe(gulp.dest('public/dist/js'))
 });
-/* 
+ 
 gulp.task('css',function(){
 	return gulp.src(paths.styles)
-		.pipe(concatCss("style.css"))
+		.pipe(concatCss("all.min.css"))
 		.pipe(minifyCSS({
 			keepBreaks: true
 		}))
-		.pipe(gulp.dest('dist/css/'))
+		.pipe(gulp.dest('public/dist/css/'))
 });
 
 gulp.task('fonts', function () {
     return gulp.src(paths.fonts)
         .pipe(fontmin())
-        .pipe(gulp.dest('dist/fonts'));
+        .pipe(gulp.dest('public/dist/fonts'));
 });
 
 gulp.task('image', function () {
     gulp.src(paths.images)
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/image'))
+        .pipe(gulp.dest('public/dist/images'))
 });
 
-gulp.task('imageSlider', function () {
+/*gulp.task('imageSlider', function () {
     gulp.src(paths.iPhoneSlider)
         .pipe(imagemin())
         .pipe(gulp.dest('dist/image/mobile/'))
@@ -66,11 +74,11 @@ gulp.task('imageSlider', function () {
 
 gulp.task('watch', function() {
   gulp.watch(paths.scripts, ['scripts']);
-  /* gulp.watch(paths.styles, ['css']);
+  gulp.watch(paths.styles, ['css']);
   gulp.watch(paths.fonts, ['fonts']);
   gulp.watch(paths.image, ['image']);
-  gulp.watch(paths.iPhoneSlider, ['imageSlider']);
+  /* gulp.watch(paths.iPhoneSlider, ['imageSlider']);
   gulp.watch(["server.js"], ['server']); */
 });
 
-gulp.task('default', ['watch', 'scripts']);
+gulp.task('default', ['watch', 'scripts', 'css', 'image', 'fonts']);

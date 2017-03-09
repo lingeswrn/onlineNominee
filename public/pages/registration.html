@@ -3,13 +3,13 @@
 	<div ng-include="'pages/homeHeader.html'"></div>
 	<div class="form-holder">
 		<div class="form-header">
-			<h2>Login to your Account</h2>
+			<h2>Create your Account</h2>
 		</div>	
 		<form>
 			<div class="form-body">	
 				<div class="log-with-social">
-					<a href="#" class="fb-btn">Login With Facebook</a>
-					<a href="#" class="g-btn">Login With Google+</a>
+					<a href="#" class="fb-btn">Register With Facebook</a>
+					<a href="#" class="g-btn">Register With Google+</a>
 				</div>
 				<img src="dist/images/or.png" alt="" class="img-responsive" />
 			  <div class="form-group">
@@ -17,14 +17,19 @@
 				<input type="username" class="form-control" id="username" value="">
 			  </div>
 			  <div class="form-group">
+				<label>Email:</label>
+				<input type="username" class="form-control" id="email" value="">
+			  </div>
+			  <div class="form-group">
 				<label>Password:</label>
 				<input type="password" class="form-control" id="" value="">
 			  </div>
-			  <div class="row">
-				<div class="col-xs-12"><label><a href="#">Forgot Password?</a></label></div>
+			  <div class="form-group">
+				<label>Confirm Password:</label>
+				<input type="password" class="form-control" id="" value="">
 			  </div>
 			  <div class="row">
-				<label class="col-xs-12">No Account? <a href="/registration">Register</a></label>
+				<label class="col-xs-12">Already have Account? <a href="/login">Login</a></label>
 			  </div>
 		    </div>
 			<div class="form-footer">	
