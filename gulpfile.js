@@ -13,6 +13,7 @@ var paths = {
 				'public/assets/javascripts/angular-route.js',
 				'public/assets/javascripts/jquery.js',
 				'public/assets/javascripts/bootstrap.js',
+				'public/assets/javascripts/fileUpload.js',
 				'public/controllers/app.js',
 				'public/controllers/homeController.js',
 				'public/controllers/educationController.js',
@@ -28,12 +29,11 @@ var paths = {
 			'public/assets/fonts/*.woff',
 			'public/assets/fonts/*.woff2'
 			],
-	images:['public/assets/images/*.png',
-			'public/assets/images/*.jpg',
-			'public/assets/images/*.jpeg',
-			'public/assets/images/*.gif'
-			],
-	iPhoneSlider:['image/mobile/new/*.png']
+	images:['public/assets/images/banner.jpg',
+			'public/assets/images/dp.png',
+			'public/assets/images/Logo.png',
+			'public/assets/images/or.png'
+			]
 };
 
 gulp.task('scripts',function(){
