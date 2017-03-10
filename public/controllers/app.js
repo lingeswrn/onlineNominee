@@ -14,6 +14,10 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
 			templateUrl: "pages/login.html",
 			controller: "loginController"
 		})
+		.when("/forget-password", {
+			templateUrl: "pages/forget-password.html",
+			controller: "loginController"
+		})
 		.when("/registration", {
 			templateUrl: "pages/registration.html",
 			controller: "registrationController"
@@ -25,6 +29,14 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
 		.when("/profile", {
 			templateUrl: "pages/profile.html",
 			controller: "profileController"
+		})
+		.when("/other-courses", {
+			templateUrl: "pages/other-courses.html",
+			controller: "coursesController"
+		})
+		.when("/career", {
+			templateUrl: "pages/career.html",
+			controller: "coursesController"
 		});
         // .otherwise({
         //     redirectTo: "/"

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Amaranth";
+    src: url("amaranth-regular-webfont.eot"); /* IE9 */
+    src: url("amaranth-regular-webfont.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("amaranth-regular-webfont.woff") format("woff"), /* chrome, firefox */
+    url("amaranth-regular-webfont.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("amaranth-regular-webfont.svg#Amaranth") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

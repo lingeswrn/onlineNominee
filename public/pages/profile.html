@@ -9,9 +9,20 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3">
-				<div class="dp-holder">
-					<img src="dist/images/dp.png" class="img-responsive" alt="" />
-					<div class="custom-file-upload img-upload"><input type="file" id="file" name="myfiles[]" multiple /></div>
+				<div class="dp-holder" style="background: url('dist/images/dp.png')">
+					<!-- <div class="form-group col-sm-9">									
+						<div class="input-group">
+							<label class="input-group-btn">
+								<span class="btn btn-default">
+									Browse&hellip; <input type="file" style="display: none;" multiple>
+								</span>
+							</label>
+							<input type="text" class="form-control" readonly>
+						</div>
+					</div> -->
+					 <label class="fileContainer txtbox"><i class="fa fa-camera" aria-hidden="true"></i><span class="choose-file">Choose File</span> <span id="file-selected"></span>
+						<input type="file" id="file-upload" />
+					  </label>
 				</div>
 			</div>
 			<div class="col-sm-offset-1 col-sm-8">

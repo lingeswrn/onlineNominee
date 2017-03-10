@@ -323,7 +323,7 @@ h2,h3{page-break-after:avoid}
 .glyphicon-menu-up:before{content:"\e260"}
 *,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{font-size:10px;-webkit-tap-highlight-color:transparent}
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333}
+body{font-size:14px;line-height:1.42857143;color:#333}
 button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}
 a{text-decoration:none}
 a:focus,a:hover{color:#23527c;text-decoration:underline}
@@ -1168,7 +1168,7 @@ to{background-position:0 0}
 .media-right,.media>.pull-right{padding-left:10px}
 .media-left,.media>.pull-left{padding-right:10px}
 .media-body,.media-left,.media-right{display:table-cell;vertical-align:top}
-.media-middle,.on-form i{vertical-align:middle}
+.media-middle{vertical-align:middle}
 .media-bottom{vertical-align:bottom}
 .media-heading{margin-top:0;margin-bottom:5px}
 .media-list{padding-left:0;list-style:none}
@@ -1450,6 +1450,8 @@ td.visible-print,th.visible-print{display:table-cell!important}
 @media print{.visible-print-inline-block{display:inline-block!important}
 .hidden-print{display:none!important}
 }
+@font-face{font-family:amaranthregular;src:url(../fonts/amaranth-regular-webfont.eot);src:url(../fonts/amaranth-regular-webfont.eot?#iefix) format('embedded-opentype'),url(../fonts/amaranth-regular-webfont.woff2) format('woff2'),url(../fonts/amaranth-regular-webfont.woff) format('woff'),url(../fonts/amaranth-regular-webfont.ttf) format('truetype'),url(../fonts/amaranth-regular-webfont.svg#amaranthregular) format('svg');font-weight:400;font-style:normal}
+body{font-family:amaranthregular!important}
 a:active,a:focus,a:hover{outline:0;text-decoration:none}
 body.sign-body,html.sign-page{height:100%}
 body.sign-body{background:url(../images/banner.jpg) center center no-repeat fixed;background-size:cover}
@@ -1484,7 +1486,7 @@ a,a:hover{color:#34b5ca}
 .title-holder{background:#f6f6f6;padding:22px 0}
 .title-holder h2{color:#34b5ca;font-weight:600;margin:0}
 .m-t-5{margin-top:5px}
-.on-form i{color:#34b5ca;font-size:18px;line-height:18px;width:18px}
+.on-form i{color:#34b5ca;font-size:18px;line-height:18px;vertical-align:middle;width:18px}
 h2 span{font-size:12px;cursor:pointer}
 h2{margin-top:0}
 .empty-10,.empty-15,.empty-20,.empty-25{height:25px}
@@ -1494,22 +1496,29 @@ h2{margin-top:0}
 .file-upload-wrapper{position:relative;margin-bottom:5px}
 .file-upload-input{color:#222;font-size:14px;padding:5px 15px;border:1px solid #ccc}
 .custom-file-upload.img-upload{position:absolute;bottom:0;left:26px;background:rgba(255,255,255,.8)}
-.dp-holder,.fa-ul>li{position:relative}
 footer{background:#212530;padding:10px 0}
 footer p{color:#fff;margin-bottom:0}
 .img-upload input.file-upload-input{display:none}
-.fa,.fa-stack,.file-upload-button{display:inline-block}
 .img-upload button{background:0 0}
 .img-upload button:focus{outline:0;border:0}
-.dp-holder{border-radius:50%;overflow:hidden;width:80%;margin-top:15px}
-.file-upload-button{cursor:pointer;color:#222;font-size:14px;padding:6px 20px;border:none;margin-left:-1px}
+.dp-holder{border-radius:50%;width:200px;margin-top:15px;height:200px;background-size:cover!important;background-position:center center!important}
+.file-upload-button{cursor:pointer;display:inline-block;color:#222;font-size:14px;padding:6px 20px;border:none;margin-left:-1px}
 .input-group.input-group-unstyled input.form-control{-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}
 .input-group-unstyled .input-group-addon{border-radius:4px;border:0;padding-left:0;background-color:transparent}
 @media (max-width:600px){.form-holder{width:90%}
 }
 @media (max-width:767px){.nav-container li.nav-btn{border:1px solid #fff;margin-right:0}
+.dp-holder{margin:auto auto 20px}
 }
 .fa.fa-pull-left,.fa.pull-left{margin-right:.3em}
+.fileContainer{overflow:hidden;position:absolute;text-align:center;font-size:12px!important;padding-top:10px;background:rgba(255,255,255,.8);bottom:-5px;width:177px}
+.fileContainer [type=file]{cursor:pointer;display:block;font-size:999px;filter:alpha(opacity=0);min-height:100%;min-width:100%;opacity:0;position:absolute;right:0;text-align:right;top:0}
+.fa,.fa-stack{display:inline-block}
+.fa-ul>li,.fileContainer i,span.choose-file{position:relative}
+.fa-fw,.fa-li{text-align:center}
+span.choose-file{cursor:pointer;top:-5px;left:15px}
+.fileContainer i{top:-5px;left:10px}
+a{box-shadow:none!important;border-radius:0!important}
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -1521,10 +1530,10 @@ footer p{color:#fff;margin-bottom:0}
 .fa-3x{font-size:3em}
 .fa-4x{font-size:4em}
 .fa-5x{font-size:5em}
-.fa-fw{width:1.28571429em;text-align:center}
+.fa-fw{width:1.28571429em}
 .fa-ul{padding-left:0;margin-left:2.14285714em;list-style-type:none}
 .fa.fa-pull-right,.fa.pull-right{margin-left:.3em}
-.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em;text-align:center}
+.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em}
 .fa-li.fa-lg{left:-1.85714286em}
 .fa-border{padding:.2em .25em .15em;border:.08em solid #eee;border-radius:.1em}
 .fa-pull-left{float:left}

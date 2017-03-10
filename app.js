@@ -46,6 +46,15 @@ app.get("/education", function(req, res, next) {
 app.get("/profile", function(req, res, next) {  
     res.sendFile('index.html', { root: __dirname + "/public" });
 });
+app.get("/other-courses", function(req, res, next) {  
+    res.sendFile('index.html', { root: __dirname + "/public" });
+});
+app.get("/career", function(req, res, next) {  
+    res.sendFile('index.html', { root: __dirname + "/public" });
+});
+app.get("/forget-password", function(req, res, next) {  
+    res.sendFile('index.html', { root: __dirname + "/public" });
+});
 
 app.use('/', index);
 app.use('/users', users);

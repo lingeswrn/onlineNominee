@@ -12,14 +12,15 @@ var paths = {
 				'public/assets/javascripts/angular.js',
 				'public/assets/javascripts/angular-route.js',
 				'public/assets/javascripts/jquery.js',
-				'public/assets/javascripts/bootstrap.js',
-				'public/assets/javascripts/fileUpload.js',
+				'public/assets/javascripts/bootstrap.js',				
 				'public/controllers/app.js',
 				'public/controllers/homeController.js',
 				'public/controllers/educationController.js',
 				'public/controllers/loginController.js',
 				'public/controllers/registrationController.js',
-				'public/controllers/profileController.js'
+				'public/controllers/profileController.js',
+				'public/controllers/coursesController.js',
+				'public/assets/javascripts/fileUpload.js'
 			],
 	styles:['public/assets/stylesheets/bootstrap.css',
 			'public/assets/stylesheets/style.css',
