@@ -19,9 +19,34 @@
 								</div>								
 								<div class="form-group col-sm-9">
 									  <select class="form-control" id="sel1">
-										<option>Select Degree</option>
-										<option>B.E.</option>
-										<option>MBA</option>
+										<option value="" selected="">Select Degree</option>
+										<option value="MBA / PGDM">MBA / PGDM</option>
+										<option value="CA">CA</option>
+										<option value="CS">CS</option>
+										<option value="ICWA">ICWA</option>
+										<option value="LLB / LLM">LLB / LLM</option>
+										<option value="B Tech / BE" selected>B Tech / BE</option>
+										<option value="BArch"> BArch</option>
+										<option value="MBBS">MBBS</option>
+										<option value="BSc">BSc</option>
+										<option value="BA">BA</option>
+										<option value="Bcom">Bcom</option>
+										<option value="BBA">BBA</option>
+										<option value="BCA">BCA</option>
+										<option value="PhD">PhD</option>
+										<option value="MSc / MS / M Tech">MSc / MS / M Tech</option>
+										<option value="MCA">MCA</option>
+										<option value="MA">MA</option>
+										<option value="Integrated Masters Program">Integrated Masters Program</option>
+										<option value="CFA">CFA</option>
+										<option value="FRM">FRM</option>
+										<option value="CWM">CWM</option>
+										<option value="AFA">AFA</option>
+										<option value="Passed CFA Level 1">Passed CFA Level 1</option>
+										<option value="Passed CFA Level 2">Passed CFA Level 2</option>
+										<option value="Passed CFA Level 3">Passed CFA Level 3</option>
+										<option value="PGDDA">PGDDA</option>
+										<option value="Other">Other</option>
 									  </select>
 								</div>
 							</div>							
@@ -30,7 +55,7 @@
 									<label>Institute</label>
 								</div>								
 								<div class="form-group col-sm-9">
-									<input type="textbox" class="form-control" value="">
+									<input type="textbox" class="form-control" value="" placeholder="Name of the Institute">
 								</div>
 							</div>							
 							<div class="row">
@@ -85,7 +110,7 @@
 								</div>
 							</div>
 							<div class="text-right">	
-								<button type="submit" class="btn btn-default blue-btn">View</button> <button type="submit" class="btn btn-default blue-btn">Save</button>
+								<button type="submit" class="btn btn-default blue-btn">Save</button>
 							</div>
 							
 						</div>		
@@ -105,181 +130,29 @@
 				</thead>
 				<tbody>
 				  <tr>
-					<td>Course 1</td>
-					<td>Institute</td>
-					<td>Jan 2016 to Jan 2017</td>
+					<td>.NET</td>
+					<td>BITS Institute</td>
+					<td>Jan 2012 to Jun 2012</td>
 					<td align="center"><a href="#">View</a></td>
 					<td align="center"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp;<a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
 				  </tr>
 				  <tr>
-					<td>Course 2</td>
-					<td>Institute</td>
-					<td>Jan 2016 to Jan 2017</td>					
+					<td>Web develpment</td>
+					<td>Bits Institute</td>
+					<td>Jan 2014 to Junl 2014</td>					
 					<td align="center"><a href="#">View</a></td>
 					<td align="center"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp;<a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
 				  </tr>
 				  <tr>
-					<td>Course 3</td>
-					<td>Institute</td>
-					<td>Jan 2016 to Jan 2017</td>					
+					<td>C, C++</td>
+					<td>CSC Institute</td>
+					<td>Jan 2014 to Jun 201</td>					
 					<td align="center"><a href="#">View</a></td>
 					<td align="center"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp;<a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-				  </tr>
-				  <tr>
-					<td>Course 1</td>
-					<td>Institute</td>
-					<td>Jan 2016 to Jan 2017</td>					
-					<td align="center"><a href="#">View</a></td>
-					<td align="center"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp;<a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-				  </tr>
-				  <tr>
-					<td>Course 2</td>
-					<td>Institute</td>
-					<td>Jan 2016 to Jan 2017</td>					
-					<td align="center"><a href="#">View</a></td>
-					<td align="center"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp;<a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-				  </tr>
-				  <tr>
-					<td>Course 3</td>
-					<td>Institute</td>
-					<td>Jan 2016 to Jan 2017</td>					
-					<td align="center"><a href="#">View</a></td>
-					<td align="center"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp;<a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-				  </tr>				  
+				  </tr>			  
 				</tbody>
 			  </table>
 		</div>		
 	</div>
 </div>
 <div ng-include="'pages/footer.html'"></div>
-<script>
-//Reference: 
-//http://www.onextrapixel.com/2012/12/10/how-to-create-a-custom-file-input-with-jquery-css3-and-php/
-;(function($) {
-
-		  // Browser supports HTML5 multiple file?
-		  var multipleSupport = typeof $('<input/>')[0].multiple !== 'undefined',
-		      isIE = /msie/i.test( navigator.userAgent );
-
-		  $.fn.customFile = function() {
-
-		    return this.each(function() {
-
-		      var $file = $(this).addClass('custom-file-upload-hidden'), // the original file input
-		          $wrap = $('<div class="file-upload-wrapper">'),
-		          $input = $('<input type="text" class="file-upload-input" />'),
-		          // Button that will be used in non-IE browsers
-		          $button = $('<button type="button" class="file-upload-button">Choose File</button>'),
-		          // Hack for IE
-		          $label = $('<label class="file-upload-button" for="'+ $file[0].id +'">Choose File</label>');
-
-		      // Hide by shifting to the left so we
-		      // can still trigger events
-		      $file.css({
-		        position: 'absolute',
-		        left: '-9999px'
-		      });
-
-		      $wrap.insertAfter( $file )
-		        .append( $file, $input, ( isIE ? $label : $button ) );
-
-		      // Prevent focus
-		      $file.attr('tabIndex', -1);
-		      $button.attr('tabIndex', -1);
-
-		      $button.click(function () {
-		        $file.focus().click(); // Open dialog
-		      });
-
-		      $file.change(function() {
-
-		        var files = [], fileArr, filename;
-
-		        // If multiple is supported then extract
-		        // all filenames from the file array
-		        if ( multipleSupport ) {
-		          fileArr = $file[0].files;
-		          for ( var i = 0, len = fileArr.length; i < len; i++ ) {
-		            files.push( fileArr[i].name );
-		          }
-		          filename = files.join(', ');
-
-		        // If not supported then just take the value
-		        // and remove the path to just show the filename
-		        } else {
-		          filename = $file.val().split('\\').pop();
-		        }
-
-		        $input.val( filename ) // Set the value
-		          .attr('title', filename) // Show filename in title tootlip
-		          .focus(); // Regain focus
-
-		      });
-
-		      $input.on({
-		        blur: function() { $file.trigger('blur'); },
-		        keydown: function( e ) {
-		          if ( e.which === 13 ) { // Enter
-		            if ( !isIE ) { $file.trigger('click'); }
-		          } else if ( e.which === 8 || e.which === 46 ) { // Backspace & Del
-		            // On some browsers the value is read-only
-		            // with this trick we remove the old input and add
-		            // a clean clone with all the original events attached
-		            $file.replaceWith( $file = $file.clone( true ) );
-		            $file.trigger('change');
-		            $input.val('');
-		          } else if ( e.which === 9 ){ // TAB
-		            return;
-		          } else { // All other keys
-		            return false;
-		          }
-		        }
-		      });
-
-		    });
-
-		  };
-
-		  // Old browser fallback
-		  if ( !multipleSupport ) {
-		    $( document ).on('change', 'input.customfile', function() {
-
-		      var $this = $(this),
-		          // Create a unique ID so we
-		          // can attach the label to the input
-		          uniqId = 'customfile_'+ (new Date()).getTime(),
-		          $wrap = $this.parent(),
-
-		          // Filter empty input
-		          $inputs = $wrap.siblings().find('.file-upload-input')
-		            .filter(function(){ return !this.value }),
-
-		          $file = $('<input type="file" id="'+ uniqId +'" name="'+ $this.attr('name') +'"/>');
-
-		      // 1ms timeout so it runs after all other events
-		      // that modify the value have triggered
-		      setTimeout(function() {
-		        // Add a new input
-		        if ( $this.val() ) {
-		          // Check for empty fields to prevent
-		          // creating new inputs when changing files
-		          if ( !$inputs.length ) {
-		            $wrap.after( $file );
-		            $file.customFile();
-		          }
-		        // Remove and reorganize inputs
-		        } else {
-		          $inputs.parent().remove();
-		          // Move the input so it's always last on the list
-		          $wrap.appendTo( $wrap.parent() );
-		          $wrap.find('input').focus();
-		        }
-		      }, 1);
-
-		    });
-		  }
-
-}(jQuery));
-
-$('input[type=file]').customFile();
-</script>

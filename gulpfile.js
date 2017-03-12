@@ -20,11 +20,13 @@ var paths = {
 				'public/controllers/registrationController.js',
 				'public/controllers/profileController.js',
 				'public/controllers/coursesController.js',
+				'public/assets/javascripts/select2.js',
 				'public/assets/javascripts/fileUpload.js'
 			],
-	styles:['public/assets/stylesheets/bootstrap.css',
-			'public/assets/stylesheets/style.css',
-			'public/assets/stylesheets/font-awesome.css'
+	styles:['public/assets/stylesheets/bootstrap.css',			
+			'public/assets/stylesheets/font-awesome.css',
+			'public/assets/stylesheets/select2.css',
+			'public/assets/stylesheets/style.css'
 			],
 	fonts: ['public/assets/fonts/*.ttf',
 			'public/assets/fonts/*.woff',
@@ -33,7 +35,8 @@ var paths = {
 	images:['public/assets/images/banner.jpg',
 			'public/assets/images/dp.png',
 			'public/assets/images/Logo.png',
-			'public/assets/images/or.png'
+			'public/assets/images/or.png',
+			'public/assets/images/noavatar.png'
 			]
 };
 
